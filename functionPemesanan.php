@@ -54,6 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         ");
         $stmt->execute([$nama_pemesan, $no_telp, $waktu_pelaksanaan_perjalanan, $jumlah_peserta, $paket_wisata_id, $harga_paket, $jumlah_tagihan, $penginapan, $transportasi, $makanan, $pemesanan_id]);
     }
+    echo json_encode(['status' => 'success', 'message' => 'Data berhasil disimpan.']);
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['action'] == 'calculate') {
